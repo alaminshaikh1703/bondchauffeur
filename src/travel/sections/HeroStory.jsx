@@ -83,13 +83,21 @@ export default function HeroStory({ isClone = false }) {
         p2Ref.current,
         p3Ref.current,
         p4Ref.current,
-        p5Ref.current,
       ],
       {
         autoAlpha: 0,
+        xPercent: -50,
+        yPercent: 0,
         y: '110vh',
       }
     );
+
+    gsap.set(p5Ref.current, {
+      autoAlpha: 0,
+      xPercent: -50,
+      yPercent: -50,
+      y: '110vh',
+    });
 
     gsap.set(text1Ref.current, { autoAlpha: 0 });
     gsap.set(text2Ref.current, { autoAlpha: 0 });
@@ -153,12 +161,16 @@ export default function HeroStory({ isClone = false }) {
       {
         x: '-6vw',
         y: '110vh',
+        xPercent: -50,
+        yPercent: 0,
         rotation: -5,
         autoAlpha: 0,
       },
       {
         x: '-33vw',
         y: '-42vh',
+        xPercent: -50,
+        yPercent: 0,
         rotation: 0,
         autoAlpha: 1,
         duration: 0.20,
@@ -174,12 +186,16 @@ export default function HeroStory({ isClone = false }) {
       {
         x: '6vw',
         y: '110vh',
+        xPercent: -50,
+        yPercent: 0,
         rotation: 5,
         autoAlpha: 0,
       },
       {
         x: '30vw',
         y: '-50vh',
+        xPercent: -50,
+        yPercent: 0,
         rotation: 0,
         autoAlpha: 1,
         duration: 0.20,
@@ -224,12 +240,16 @@ export default function HeroStory({ isClone = false }) {
       {
         x: '-10vw',
         y: '110vh',
+        xPercent: -50,
+        yPercent: 0,
         rotation: -4,
         autoAlpha: 0,
       },
       {
         x: '-25vw',
         y: '0vh',
+        xPercent: -50,
+        yPercent: 0,
         rotation: 0,
         autoAlpha: 1,
         duration: 0.14,
@@ -245,12 +265,16 @@ export default function HeroStory({ isClone = false }) {
       {
         x: '10vw',
         y: '110vh',
+        xPercent: -50,
+        yPercent: 0,
         rotation: 4,
         autoAlpha: 0,
       },
       {
         x: '30vw',
         y: '10vh',
+        xPercent: -50,
+        yPercent: 0,
         rotation: 0,
         autoAlpha: 1,
         duration: 0.14,
@@ -277,10 +301,14 @@ export default function HeroStory({ isClone = false }) {
       {
         x: '0vw',
         y: '110vh',
+        xPercent: -50,
+        yPercent: -50,
         autoAlpha: 0,
       },
       {
         y: '-120vh',
+        xPercent: -50,
+        yPercent: -50,
         duration: 0.64,
         ease: 'none',
       },
@@ -401,7 +429,7 @@ export default function HeroStory({ isClone = false }) {
         duration: 0.06,
         ease: 'power1.in',
       },
-      0
+      0.76
     );
 
   }, {
@@ -466,7 +494,7 @@ export default function HeroStory({ isClone = false }) {
     <section
       id="hero"
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-[#B8D3EA] text-light [will-change:transform] [backface-visibility:hidden] transform-gpu"
+      className="relative h-screen w-full overflow-hidden bg-[#B8D3EA] text-light"
     >
 
       {/* Background Image */}
@@ -568,7 +596,7 @@ export default function HeroStory({ isClone = false }) {
 
         <div
           ref={p1Ref}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[30vw] md:w-[40vw] max-w-[480px] min-w-[220px] aspect-[4/3] rounded-[6px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.65),0_0_25px_rgba(0,0,0,0.3)] overflow-hidden opacity-0 invisible"
+          className="absolute left-1/2 top-1/2 w-[30vw] md:w-[40vw] max-w-[480px] min-w-[220px] aspect-[4/3] rounded-[6px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.65),0_0_25px_rgba(0,0,0,0.3)] overflow-hidden opacity-0 invisible"
         >
           <img
             src={floatingImages[0]?.url || '/hero/1.webp'}
@@ -581,7 +609,7 @@ export default function HeroStory({ isClone = false }) {
 
         <div
           ref={p2Ref}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] md:w-[36vw] max-w-[600px] min-w-[260px] aspect-[16/12] rounded-[6px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.65),0_0_25px_rgba(0,0,0,0.3)] overflow-hidden opacity-0 invisible"
+          className="absolute left-1/2 top-1/2 w-[50vw] md:w-[36vw] max-w-[600px] min-w-[260px] aspect-[16/12] rounded-[6px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.65),0_0_25px_rgba(0,0,0,0.3)] overflow-hidden opacity-0 invisible"
         >
           <img
             src={floatingImages[1]?.url || '/hero/2.webp'}
@@ -594,7 +622,7 @@ export default function HeroStory({ isClone = false }) {
 
         <div
           ref={p3Ref}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[23vw] md:w-[24vw] max-w-[360px] min-w-[170px] aspect-[4/5] rounded-[6px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6),0_0_25px_rgba(0,0,0,0.3)] overflow-hidden opacity-0 invisible"
+          className="absolute left-1/2 top-1/2 w-[23vw] md:w-[24vw] max-w-[360px] min-w-[170px] aspect-[4/5] rounded-[6px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6),0_0_25px_rgba(0,0,0,0.3)] overflow-hidden opacity-0 invisible"
         >
           <img
             src={floatingImages[2]?.url || '/hero/3.webp'}
@@ -607,7 +635,7 @@ export default function HeroStory({ isClone = false }) {
 
         <div
           ref={p4Ref}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[25vw] md:w-[26vw] max-w-[400px] min-w-[180px] aspect-[5/4] rounded-[6px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6),0_0_25px_rgba(0,0,0,0.3)] overflow-hidden opacity-0 invisible"
+          className="absolute left-1/2 top-1/2 w-[25vw] md:w-[26vw] max-w-[400px] min-w-[180px] aspect-[5/4] rounded-[6px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.6),0_0_25px_rgba(0,0,0,0.3)] overflow-hidden opacity-0 invisible"
         >
           <img
             src={floatingImages[3]?.url || '/hero/4.webp'}
@@ -620,7 +648,7 @@ export default function HeroStory({ isClone = false }) {
 
         <div
           ref={p5Ref}
-          className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[26vw] md:w-[28vw] max-w-[440px] min-w-[220px] aspect-[4/5] rounded-[6px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7),0_0_30px_rgba(0,0,0,0.4)] overflow-hidden opacity-0 invisible"
+          className="absolute left-1/2 top-1/2 w-[26vw] md:w-[28vw] max-w-[440px] min-w-[220px] aspect-[4/5] rounded-[6px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7),0_0_30px_rgba(0,0,0,0.4)] overflow-hidden opacity-0 invisible"
         >
           <img
             src={floatingImages[4]?.url || '/hero/5.webp'}

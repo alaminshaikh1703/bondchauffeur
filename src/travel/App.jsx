@@ -87,17 +87,27 @@ export default function App() {
     attachLoopSync();
     const lenisTimer = setTimeout(attachLoopSync, 600);
 
-    // Refresh ScrollTrigger calculations after mount so the infinite loop height stays accurate
-    const timer1 = setTimeout(() => ScrollTrigger.refresh(), 350);
-    const timer2 = setTimeout(() => ScrollTrigger.refresh(), 850);
-    const timer3 = setTimeout(() => ScrollTrigger.refresh(), 1200);
+    // Deterministic font and asset layout stabilization for ScrollTrigger
+    let cancelled = false;
+    if (typeof document !== 'undefined' && document.fonts?.ready) {
+      document.fonts.ready.then(() => {
+        if (!cancelled) {
+          ScrollTrigger.refresh();
+        }
+      });
+    }
+
+    const handleWindowLoad = () => {
+      ScrollTrigger.refresh();
+    };
+    window.addEventListener('load', handleWindowLoad);
+
     return () => {
+      cancelled = true;
       window.removeEventListener('beforeunload', handleBeforeUnload);
+      window.removeEventListener('load', handleWindowLoad);
       if (unbindLoop) unbindLoop();
       clearTimeout(lenisTimer);
-      clearTimeout(timer1);
-      clearTimeout(timer2);
-      clearTimeout(timer3);
     };
   }, []);
 

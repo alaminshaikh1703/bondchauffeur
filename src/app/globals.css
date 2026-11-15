@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+
+/* Lenis Recommended Infinite / Smooth Scroll Styles */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* ========================================================
+   Forma DJR Local Web Font Faces (Kudanil Design System)
+   ======================================================== */
+@font-face {
+  font-family: "Forma DJR Deck";
+  src: url("/fonts/FormaDJRDeck-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Forma DJR Deck";
+  src: url("/fonts/FormaDJRDisplay-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Forma DJR Deck";
+  src: url("/fonts/FormaDJRDisplay-Bold.woff2") format("woff2");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("/fonts/FormaDJRMicro-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("/fonts/FormaDJRMicro-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Forma DJR Micro";
+  src: url("/fonts/FormaDJRMicro-Bold.woff2") format("woff2");
+  font-weight: 600 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-heading: "Forma DJR Deck", Arial, sans-serif;
+  --font-body: "Forma DJR Micro", Arial, sans-serif;
+  --font-cormorant: "Forma DJR Deck", Arial, sans-serif;
+  --font-montserrat: "Forma DJR Micro", Arial, sans-serif;
+  --font-jakarta: "Forma DJR Micro", Arial, sans-serif;
+  --font-deck: "Forma DJR Deck", Arial, sans-serif;
+  --font-micro: "Forma DJR Micro", Arial, sans-serif;
+  --background: #0B0E14;
+  --foreground: #F8FAFC;
+  --color-primary: #131922;
+  --color-on-primary: #FFFFFF;
+  --color-secondary: #1A222E;
+  --color-on-secondary: #F8FAFC;
+  --color-accent: #C5A059;
+  --color-accent-hover: #B08B44;
+  --color-accent-blue: #0F63BD;
+  --color-accent-blue-hover: #0D529C;
+  --color-surface: #131922;
+  --color-surface-raised: #1A222E;
+  --color-border: rgba(255, 255, 255, 0.12);
+  --color-border-light: rgba(255, 255, 255, 0.20);
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #94A3B8;
+  --color-text-muted: #64748B;
+  
+  /* Spacing Scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-2xl: 48px;
+  --space-3xl: 64px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+html {
+  font-size: 18px;
+}
+
+body {
+  color: #F8FAFC;
+  background-color: #0B0E14;
+  font-family: "Forma DJR Micro", Arial, sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Global Headings use Forma DJR Deck */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Forma DJR Deck", Arial, sans-serif;
+  letter-spacing: -0.015em;
+}
+
+/* Premium Liquid Glass Card Container */
+.luxury-glass-card,
+.blacklane-glass-card {
+  background-color: rgba(11, 14, 20, 0.94);
+  background-image: 
+    radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.08), transparent 70%),
+    radial-gradient(circle at 80% 100%, rgba(197, 160, 89, 0.05), transparent 60%);
+  backdrop-filter: blur(28px);
+  -webkit-backdrop-filter: blur(28px);
+  box-shadow: 0 20px 50px -8px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+}
+
+.luxury-segmented-control,
+.blacklane-segmented-control {
+  background-color: rgba(11, 14, 20, 0.95);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), inset 0 0 0 1px rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  padding: 4px;
+}
+
+/* Luxury High-Contrast Underline & Outline Fields */
+.blacklane-underline-field,
+.luxury-underline-field {
+  box-shadow: rgba(255, 255, 255, 0.3) 0px -1px 0px 0px inset;
+  transition: box-shadow 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease;
+}
+
+.blacklane-underline-field:focus-within,
+.luxury-underline-field:focus-within {
+  box-shadow: #C5A059 0px -2px 0px 0px inset;
+}
+
+/* Hide scrollbars completely while preserving mouse wheel, trackpad and touch scroll */
+.scrollbar-none::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.scrollbar-none,
+.no-scrollbar {
+  -ms-overflow-style: none !important; /* IE and Edge */
+  scrollbar-width: none !important; /* Firefox */
+}
+
+/* Sapphire Primary Action Button */
+.blacklane-btn-primary,
+.luxury-btn-primary {
+  background-color: #0F63BD;
+  color: #FFFFFF;
+  border-radius: 999px;
+  font-family: var(--font-montserrat), Montserrat, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 4px 14px rgba(15, 99, 189, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.blacklane-btn-primary:hover,
+.luxury-btn-primary:hover {
+  background-color: #0D529C;
+  box-shadow: 0 6px 20px rgba(15, 99, 189, 0.4);
+  transform: translateY(-1px);
+}
+
+.blacklane-btn-primary:active,
+.luxury-btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Champagne Gold Accent Button */
+.luxury-btn-gold {
+  background-color: #C5A059;
+  color: #0B0E14;
+  border-radius: 999px;
+  font-family: var(--font-montserrat), Montserrat, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.25);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.luxury-btn-gold:hover {
+  background-color: #D4AF37;
+  box-shadow: 0 6px 20px rgba(197, 160, 89, 0.4);
+  transform: translateY(-1px);
+}
+
+/* Outlined Glass Button */
+.blacklane-btn-outlined,
+.luxury-btn-outlined {
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #F8FAFC;
+  background-color: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  font-family: var(--font-montserrat), Montserrat, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 6px 18px;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.blacklane-btn-outlined:hover,
+.luxury-btn-outlined:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.4);
+  color: #FFFFFF;
+}
+
+/* Editorial typography for luxury headings (Kudanil Forma DJR Deck) */
+.font-editorial,
+.font-serif {
+  font-family: var(--font-heading), "Forma DJR Deck", Arial, sans-serif !important;
+  letter-spacing: -0.015em;
+}
+
+/* Visible Keyboard Focus Ring for Accessibility */
+:focus-visible {
+  outline: 2px solid #C5A059;
+  outline-offset: 2px;
+}
+
+/* Reduced Motion Mode */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Lenis Smooth Scrolling Styles */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+
+
+/* Ammar Luxury Black Footer */
+.footer-flatline-gradient {
+  background-color: #000000 !important;
+  background-image: none !important;
+}
+
+/* Kudanil-Style Ammar Luxury Expedition Marquee Animation */
+@keyframes continuousMarqueeDrift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.expedition-marquee-anim {
+  animation: continuousMarqueeDrift 65s linear infinite;
+  will-change: transform;
+}
+
+.expedition-marquee-anim:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle Cartographic Grid Background */
+.cartographic-grid-bg {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 51, 87, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 51, 87, 0.05) 1px, transparent 1px);
+}
+
+
+
+
+

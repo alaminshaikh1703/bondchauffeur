@@ -1,0 +1,121 @@
+import type { Config } from "tailwindcss";
+
+const config: Config = {
+  content: [
+    "./resources/**/*.blade.php",
+    "./resources/**/*.{js,ts,jsx,tsx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/travel/**/*.{js,ts,jsx,tsx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          obsidian: "#0B0E14",
+          dark: "#0F1319",
+          surface: "#131922",
+          surfaceRaised: "#1A222E",
+          surfaceHover: "#232D3D",
+          border: "rgba(255, 255, 255, 0.12)",
+          borderLight: "rgba(255, 255, 255, 0.20)",
+          gold: "#C5A059",
+          goldHover: "#B08B44",
+          goldLight: "#F4E8D1",
+          goldDark: "#8C6D2B",
+          blue: "#0F63BD",
+          blueHover: "#0D529C",
+          blueLight: "#AECFF3",
+          textPrimary: "#F8FAFC",
+          textSecondary: "#94A3B8",
+          textMuted: "#64748B",
+        },
+        // Backward compatibility mapping for existing components
+        blacklane: {
+          dark: "#0F1319",
+          card: "#131922",
+          surface: "#1A222E",
+          border: "rgba(255, 255, 255, 0.12)",
+          blue: "#0F63BD",
+          blueHover: "#0D529C",
+          blueLight: "#AECFF3",
+          textMuted: "#94A3B8",
+        },
+        // Ammar Luxury New Zealand Expedition Design System (Kudanil Reference)
+        persian: "#003357",
+        accent: "#4589BC",
+        surface: "#F2EBE3",
+        light: "#FFFFFF",
+        expedition: {
+          persian: "#003357",
+          accent: "#4589BC",
+          sand: "#F2EBE3",
+          sky: "#B8D3EA",
+          alpine: "#EFE1D4",
+          gold: "#D4AF37",
+          goldOchre: "#C59B27",
+          earthOchre: "#8C6D3F",
+          abyss: "#0B192C",
+          marine: "#001F36",
+        },
+      },
+      transitionTimingFunction: {
+        kudanil: "cubic-bezier(0.785, 0.135, 0.15, 0.86)",
+      },
+      fontFamily: {
+        display: ["'Forma DJR Deck'", "'Plus Jakarta Sans'", "Arial", "sans-serif"],
+        serif: ["'Forma DJR Deck'", "Arial", "sans-serif"],
+        sans: ["'Forma DJR Micro'", "Arial", "sans-serif"],
+        heading: ["'Forma DJR Deck'", "Arial", "sans-serif"],
+        body: ["'Forma DJR Micro'", "Arial", "sans-serif"],
+        deck: ["'Forma DJR Deck'", "Arial", "sans-serif"],
+        micro: ["'Forma DJR Micro'", "Arial", "sans-serif"],
+        cormorant: ["'Forma DJR Deck'", "Arial", "sans-serif"],
+        montserrat: ["'Forma DJR Micro'", "Arial", "sans-serif"],
+        jakarta: ["'Forma DJR Micro'", "Arial", "sans-serif"],
+      },
+      boxShadow: {
+        glass: "0 4px 20px -2px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.12)",
+        "glass-elevated": "0 20px 48px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.18)",
+        "gold-glow": "0 0 25px -5px rgba(197, 160, 89, 0.35)",
+        "blue-glow": "0 0 25px -5px rgba(15, 99, 189, 0.35)",
+        card: "0 20px 40px -15px rgba(0, 0, 0, 0.6)",
+      },
+      spacing: {
+        "18": "4.5rem",
+        "22": "5.5rem",
+        "30": "7.5rem",
+        "space-1": "2px",
+        "space-2": "10px",
+        "space-3": "12px",
+        "space-4": "16px",
+        "space-5": "20px",
+        "space-6": "24px",
+        "space-7": "25px",
+        "space-8": "32px",
+        "space-9": "40px",
+        "space-10": "60px",
+        "space-11": "150px",
+        "space-12": "200px",
+      },
+      keyframes: {
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
+        fadeIn: {
+          from: { opacity: "0", transform: "scale(0.98)" },
+          to: { opacity: "1", transform: "scale(1)" },
+        },
+      },
+      animation: {
+        marquee: "marquee 70s linear infinite",
+        fadeIn: "fadeIn 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards",
+      },
+    },
+  },
+  plugins: [],
+};
+
+export default config;

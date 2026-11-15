@@ -81,7 +81,7 @@ differently.
           </h2>
           <p className="text-sm sm:text-base max-w-2xl mx-auto mt-6 text-persian/85 font-light leading-relaxed drop-shadow-sm will-change-[transform,opacity,filter]">
             A private journey through the South Island, arranged entirely around two guests and their own pace.
-From the Southern Alps to Milford Sound, every detail is considered before it is ever asked for.
+From the Southern Alps to Milford Sound.
           </p>
           <a
             href="#story"

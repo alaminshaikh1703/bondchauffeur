@@ -121,7 +121,7 @@ export default function App() {
         <HeroStory isClone={false} />
 
         {/* 3) Adventure Across Two Extraordinary Islands Map & 4 Region Cards */}
-        <MapExpeditions />
+        <MapExpeditions className="-mt-[100vh]" />
 
         {/* 4) Mountain Reveal & Experience Sanctuary Intro */}
         <YachtShowcase />

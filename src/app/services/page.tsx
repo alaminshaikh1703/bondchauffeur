@@ -25,6 +25,8 @@ import {
   Car,
   Clock,
   Shield,
+  Gift,
+  Gem,
 } from "lucide-react";
 import { Preloader } from "@/components/Preloader";
 import { ScrollEffects } from "@/components/ScrollEffects";
@@ -358,36 +360,103 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* 4. First Luxe Style Editorial Context Section
-      <section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full pb-20 sm:pb-28">
-        <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/15 to-transparent mb-12 sm:mb-16" />
+      {/* 4. Moments by Bond - Bespoke Surprises & Curated Deliveries (Compact ~50% Height) */}
+      <section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full mb-12 sm:mb-16">
+        <FadeIn>
+          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden border border-white/15 isolate group">
+            {/* Background Image: moments.jpg (completely clear, no dark shadow overlays) */}
+            <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none select-none">
+              <img
+                src="/moments.jpg"
+                alt="Moments by Bond - Bespoke Surprises & Luxury Deliveries"
+                className="w-full h-full object-cover object-center scale-[1.01] group-hover:scale-105 transition-transform duration-1000 ease-out"
+                loading="eager"
+              />
+              {/* Minimal uniform scrim to preserve crystal-clear photography while keeping text readable */}
+              <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+            </div>
 
-        <div className="grid md:grid-cols-2 gap-10 lg:gap-16 text-[#D8D8D8] text-[15px] sm:text-[16px] leading-[175%] font-light">
-          <div>
-            <h2 className="font-editorial text-white text-2xl sm:text-3xl lg:text-[32px] leading-[115%] mb-5 font-normal">
-              Private lifestyle management across every detail
-            </h2>
-            <p>
-              Ammar Luxury New Zealand acts as a discreet luxury chauffeur and private concierge for principals, traveling executives, high-net-worth families, and private institutions who need dependable mobility across Aotearoa. Requests can be practical, exceptional, or highly time-sensitive: the value is one trusted team that understands the client, the brief, and the standard expected.
-            </p>
-            <p className="mt-4 text-white/70">
-              Services cover private airport transfers, intercity chauffeured travel, lifestyle concierge, luxury shopping assistance, elite school runs, bespoke South Island scenic day tours, executive event fleet management, and restorative wellness retreat transfers.
-            </p>
-          </div>
+            {/* Content Container (Compact 50% Height) */}
+            <div className="relative z-10 py-7 sm:py-9 md:py-11 px-5 sm:px-8 lg:px-12 text-center flex flex-col items-center">
+              {/* Eyebrow Label matching reference */}
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/40 backdrop-blur-md border border-white/20 mb-2.5 sm:mb-3">
+                <Sparkles className="w-3 h-3 text-[#C5A059]" />
+                <span className="text-[9px] sm:text-[10px] font-semibold tracking-[0.2em] uppercase text-white/95">
+                  Indulge in Every Bond Chauffeur Experience
+                </span>
+              </div>
 
-          <div>
-            <h2 className="font-editorial text-white text-2xl sm:text-3xl lg:text-[32px] leading-[115%] mb-5 font-normal">
-              Designed for principals, advisers and institutions
-            </h2>
-            <p>
-              For high-net-worth individuals and traveling families, we protect time and privacy. For corporate offices, embassies, and luxury travel agencies, we provide a responsive chauffeur layer that can support principals, guests, executives, and households without diluting confidentiality.
-            </p>
-            <p className="mt-4 text-white/70">
-              Every engagement is managed quietly, with careful vehicle selection, real-time flight monitoring, clear communication, and a bias for solutions that feel effortless to the client.
-            </p>
+              {/* Main Heading (Smaller, refined typography) */}
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-editorial font-medium tracking-tight text-white uppercase mb-1">
+                Moments by Bond
+              </h2>
+              <p className="text-[9px] sm:text-[10px] font-medium tracking-[0.24em] uppercase text-[#C5A059] mb-2 sm:mb-3">
+                Moments That&apos;s Only For You
+              </p>
+
+              {/* Subtitle / Paragraph (Smaller text & tighter margin) */}
+              <p className="max-w-xl text-xs sm:text-[13px] text-white/95 font-light leading-relaxed mb-5 sm:mb-6">
+                When you can’t be there, let us deliver your love with grace and care — turning every gesture into a cherished memory, crafted with your intentions in mind.
+              </p>
+
+              {/* 3 Pillars matching reference (Compact layout) */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-2.5 sm:gap-3.5 w-full max-w-4xl mb-5 sm:mb-6">
+                {/* Feature 1 */}
+                <div className="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#C5A059]/60 hover:bg-black/50 transition-all duration-300 text-left group/item">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/30 bg-white/15 backdrop-blur-md flex items-center justify-center text-white shrink-0 group-hover/item:border-[#C5A059] group-hover/item:text-[#C5A059] group-hover/item:scale-110 transition-all duration-300">
+                    <Gift className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[1.75]" />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-medium text-white leading-snug">
+                    Beautiful bouquets, gifts, and special deliveries
+                  </span>
+                </div>
+
+                {/* Feature 2 */}
+                <div className="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#C5A059]/60 hover:bg-black/50 transition-all duration-300 text-left group/item">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/30 bg-white/15 backdrop-blur-md flex items-center justify-center text-white shrink-0 group-hover/item:border-[#C5A059] group-hover/item:text-[#C5A059] group-hover/item:scale-110 transition-all duration-300">
+                    <Briefcase className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[1.75]" />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-medium text-white leading-snug">
+                    Hand-delivered with elegance and personalisation
+                  </span>
+                </div>
+
+                {/* Feature 3 */}
+                <div className="flex items-center gap-2.5 sm:gap-3 p-2.5 sm:p-3 rounded-xl bg-black/40 backdrop-blur-md border border-white/20 hover:border-[#C5A059]/60 hover:bg-black/50 transition-all duration-300 text-left group/item">
+                  <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-white/30 bg-white/15 backdrop-blur-md flex items-center justify-center text-white shrink-0 group-hover/item:border-[#C5A059] group-hover/item:text-[#C5A059] group-hover/item:scale-110 transition-all duration-300">
+                    <Gem className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[1.75]" />
+                  </div>
+                  <span className="text-[11px] sm:text-xs font-medium text-white leading-snug">
+                    Ideal for anniversaries, surprises, or when words aren’t enough
+                  </span>
+                </div>
+              </div>
+
+              {/* Action Buttons (Compact size) */}
+              <div className="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3">
+                <button
+                  type="button"
+                  onClick={() => handleOpenBooking("Moments by Bond - Bespoke Delivery")}
+                  className="blacklane-btn-primary px-5 sm:px-6 py-2.5 text-[11px] sm:text-xs font-semibold flex items-center gap-2 hover:scale-105 active:scale-95 transition-all cursor-pointer rounded-full"
+                >
+                  <Gift className="w-3.5 h-3.5 text-white" />
+                  <span>Curate a Special Delivery</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => setAskDrawerOpen(true)}
+                  className="px-5 sm:px-6 py-2.5 rounded-full border border-white/40 hover:border-white text-white hover:bg-white/15 text-[11px] sm:text-xs font-medium backdrop-blur-md bg-black/30 transition-all cursor-pointer flex items-center gap-2"
+                >
+                  <MessageSquare className="w-3.5 h-3.5 text-[#C5A059]" />
+                  <span>Ask Concierge About Moments</span>
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
-      </section> */}
+        </FadeIn>
+      </section>
 
       {/* 5. Direct CTA Banner */}
       <section className="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full pb-20">

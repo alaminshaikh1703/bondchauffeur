@@ -500,7 +500,7 @@ export default function HeroStory({ isClone = false }) {
       {/* Background Image */}
 
       <div className="absolute inset-0 w-full h-full overflow-hidden z-0 pointer-events-none [will-change:transform] [backface-visibility:hidden] transform-gpu">
-        <img
+        {/* <img
           src={heroData.bgImage || "/travel8.jpg"}
           alt="Ammar Luxury New Zealand"
           className="w-full h-full object-cover transform-gpu will-change-transform"
@@ -508,7 +508,27 @@ export default function HeroStory({ isClone = false }) {
             objectPosition: heroData.bgPosition || 'center center',
             transform: `scale(${heroData.bgScale || 1})`,
           }}
-        />
+        /> */
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  preload="metadata"
+  poster="/travel8.jpg"
+  className="w-full h-full object-cover transform-gpu"
+  style={{
+    objectPosition: heroData.bgPosition || "center center",
+    transform: `scale(${heroData.bgScale || 1})`,
+  }}
+>
+  <source
+    src="/travelbg.mp4"
+    type="video/mp4"
+  />
+</video>}
+
+
         {/* Subtle Luxury Dark Vignette for Text Contrast */}
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/35 pointer-events-none" />
       </div>

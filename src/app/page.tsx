@@ -7,6 +7,7 @@ import { StandardsSection } from "@/components/sections/StandardsSection";
 import { FleetSection } from "@/components/fleet/FleetSection";
 import { Footer } from "@/components/layout/Footer";
 import { ScrollEffects } from "@/components/ScrollEffects";
+import MapExpeditions from "@/travel/sections/MapExpeditions";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <SanctuarySection />
       <StandardsSection />
       <FleetSection />
-       <AppSection />
+      <MapExpeditions />
       <Footer />
     </main>
   );

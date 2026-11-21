@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const INITIAL_VISIBLE_COUNT = 4;
 
-export default function MapExpeditions() {
+export default function MapExpeditions({ className = "" }) {
   const [selectedRegion, setSelectedRegion] = useState(null);
   const [hoveredRegion, setHoveredRegion] = useState(null);
   const [showAll, setShowAll] = useState(false);
@@ -67,7 +67,7 @@ export default function MapExpeditions() {
   return (
     <section
       id="expeditions"
-      className="relative z-20 bg-[#F2EBE3] text-persian -mt-[100vh]"
+      className={`relative z-20 bg-[#F2EBE3] text-persian ${className}`.trim()}
     >
       {/* 1) Solid Background Text Header Block */}
       <div className="bg-[#F2EBE3] pt-28 md:pt-36 pb-16 md:pb-20 px-6">
@@ -93,7 +93,7 @@ export default function MapExpeditions() {
       {/* 2) Full-Width Clear Background Image (travel15.jpeg) + South Island Map */}
       <div className="relative w-full overflow-hidden py-12 md:py-16 px-6">
         <img
-          src="/travel13.jpg"
+          src="/mapbg5.jpeg"
           alt="South Island New Zealand Alpine Landscape"
           className="absolute inset-0 w-full h-full object-cover object-center pointer-events-none select-none"
         />

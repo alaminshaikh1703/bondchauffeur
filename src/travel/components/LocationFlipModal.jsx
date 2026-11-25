@@ -23,6 +23,7 @@ const slideVariants = {
 
 export default function LocationFlipModal({ location, onClose }) {
   const [[currentIndex, direction], setSlide] = useState([0, 0]);
+  const [isDragging, setIsDragging] = useState(false);
 
   const images =
     location?.gallery && location.gallery.length > 0
@@ -58,6 +59,17 @@ export default function LocationFlipModal({ location, onClose }) {
     [total]
   );
 
+  // Auto-slide images every 1 second (1000ms delay) when location card is opened
+  useEffect(() => {
+    if (!location || total <= 1 || isDragging) return;
+
+    const timer = setInterval(() => {
+      paginate(1);
+    }, 1500);
+
+    return () => clearInterval(timer);
+  }, [location?.id, total, paginate, currentIndex, isDragging]);
+
   const goToSlide = (targetIndex) => {
     if (targetIndex === currentIndex) return;
     setSlide([targetIndex, targetIndex > currentIndex ? 1 : -1]);
@@ -90,6 +102,7 @@ export default function LocationFlipModal({ location, onClose }) {
   }, [location, onClose, paginate]);
 
   const handleDragEnd = (_event, { offset, velocity }) => {
+    setIsDragging(false);
     const swipeThreshold = 45;
     if (offset.x < -swipeThreshold || velocity.x < -350) {
       paginate(1);
@@ -155,6 +168,7 @@ export default function LocationFlipModal({ location, onClose }) {
                   drag="x"
                   dragConstraints={{ left: 0, right: 0 }}
                   dragElastic={0.22}
+                  onDragStart={() => setIsDragging(true)}
                   onDragEnd={handleDragEnd}
                   className="absolute inset-0 w-full h-full cursor-grab active:cursor-grabbing"
                 >

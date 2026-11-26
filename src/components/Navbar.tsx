@@ -138,7 +138,7 @@ export function Navbar() {
                     : "text-xl sm:text-2xl lg:text-[26px]"
                 }`}
               >
-                Ammar Luxury
+                Bond Chauffeur
               </span>
               {/* <span
                 className={`text-[9px] sm:text-[10px] tracking-widest uppercase font-semibold text-[#C5A059] bg-[#C5A059]/10 px-1.5 sm:px-2 py-0.5 rounded-full border border-[#C5A059]/30 transition-opacity ${
